@@ -3,11 +3,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8cac3;
 }
 
 /* Estilo para el header */
 header {
-    background-color: #4CAF50;
+    background-color: #4d303b;
     color: white;
     padding: 20px;
     text-align: center;
@@ -55,13 +56,15 @@ nav ul li a {
 /* Estilo para la sección de reseñas usando Grid */
 #reseñas {
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #d69098;
+    text-align: center;
 }
 
 .reseñas-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 100px;
+    justify-content: center;
 }
 
 .card {
@@ -74,6 +77,9 @@ nav ul li a {
 /* Estilo para el formulario de contacto */
 #contacto {
     padding: 20px;
+    text-align: center;
+    background-color: #95656e;
+    margin: 100px;
 }
 
 form {
@@ -91,7 +97,8 @@ form input, form textarea {
 }
 
 form button {
-    padding: 10px 10px;
+    margin: 10px;
+    padding: 10px 10px;    
     background-color: #4CAF50;
     color: rgb(255, 255, 255);
     border: none;
