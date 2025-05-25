@@ -32,6 +32,14 @@ nav ul li a {
     font-weight: bold;
 }
 
+.bienvenida{   
+    text-align: center;
+}
+
+.bienvenida img {   
+    width: 60%;
+}
+
 /* Estilo para la sección de productos */
 #productos {
     padding: 20px;
