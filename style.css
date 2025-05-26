@@ -10,20 +10,26 @@ body {
 header {
     background-color: #4d303b;
     color: white;
+    width: 100%;
     padding: 20px;
     text-align: center;
 }
 
 /* Estilo para la barra de navegación */
 nav ul {
+    display: flex;
     list-style: none;
     padding: 0;
+    margin: 0 0;
+    margin-top: 10px;
     text-align: center;
+    justify-content: center;
+    gap: 100px;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 10px;    
 }
 
 nav ul li a {
@@ -43,12 +49,15 @@ nav ul li a {
 /* Estilo para la sección de productos */
 #productos {
     padding: 20px;
+    text-align: center;
 }
 
 .productos-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 100px;
+    
 }
 
 .producto {
@@ -57,8 +66,8 @@ nav ul li a {
 }
 
 .producto img {
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 400px;
 }
 
 /* Estilo para la sección de reseñas usando Grid */
