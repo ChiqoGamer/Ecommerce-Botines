@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPDL Botines</title>
     <link rel="shortcut icon" href="./images/icoBotines.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="og:image" href="./images/Botines/bannerBotines2.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  <!-- Importando fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importando fuente de Google Fonts -->
+
+    <!-- Meta descripción (útil para buscadores también) -->
+    <meta name="description" content="Pagina web dedicada a la comercializacion de botines de futbol">
+
+    <!-- Open Graph (para Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="EPDL Botines">
+    <meta property="og:description" content="Pagina web dedicada a la comercializacion de botines de futbol">
+    <meta property="og:image" content="https://chiqogamer.github.io/Ecommerce-Botines/images/Botines/bannerBotines.png">
+    <meta property="og:url" content="https://chiqogamer.github.io/Ecommerce-Botines">
+    <meta property="og:type" content="website">
+
 </head>
+
 <body>
     <!-- Encabezado con la etiqueta header -->
-    <header id="arriba">              
-        <a href=""> <img src="./images/el_pibe_logo.png" alt="Imagen principal" style="width: 12%;"> </a> 
-        <!-- Barra de navegación con enlaces a las secciones -->        
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#reseñas">Reseñas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>    
+    <header id="arriba">
+        <a href=""> <img src="./images/el_pibe_logo.png" alt="Imagen principal"> </a>
+        <!-- Barra de navegación con enlaces a las secciones -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Sección principal de la página -->
     <main>
         <!-- Sección de inicio con imagen -->
-        <section class="bienvenida" id="inicio">
-            <h2>Bienvenidos a nuestra tienda</h2>            
+        <section id="inicio">
+            <h2>Bienvenidos a nuestra tienda</h2>
 
             <div class="carrusel">
-            <!-- Radios ocultos -->
-            <input type="radio" name="slider" id="s1" checked>
-            <input type="radio" name="slider" id="s2">
-            <input type="radio" name="slider" id="s3">
-            <input type="radio" name="slider" id="s4">
-        
-            <!-- Contenedor de las imágenes -->
-            <div class="slides">
-                <div class="slide"><img src="./images/Botines/bannerBotines.png" alt="Imagen 1"></div>
-                <div class="slide"><img src="./images/Botines/bannerBotines1.png" alt="Imagen 3"></div>
-                <div class="slide"><img src="./images/Botines/bannerBotines2.png" alt="Imagen 4"></div>
-                <div class="slide"><img src="./images/Botines/bannerBotines3.png" alt="Imagen 2"></div>
-            </div>
-        
-            <!-- Navegación manual con círculos -->
-            <div class="navegacion">
-                <label for="s1"></label>
-                <label for="s2"></label>
-                <label for="s3"></label>
-                <label for="s4"></label>
-            </div>
-        </div>
+                <!-- Radios ocultos -->
+                <input type="radio" name="slider" id="s1" checked>
+                <input type="radio" name="slider" id="s2">
+                <input type="radio" name="slider" id="s3">
+                <input type="radio" name="slider" id="s4">
 
-            
+                <!-- Contenedor de las imágenes -->
+                <div class="slides">
+                    <div class="slide"><img src="./images/Botines/bannerBotines.png" alt="Imagen 1" ></div>
+                    <div class="slide"><img src="./images/Botines/bannerBotines1.png" alt="Imagen 3"></div>
+                    <div class="slide"><img src="./images/Botines/bannerBotines2.png" alt="Imagen 4"></div>
+                    <div class="slide"><img src="./images/Botines/bannerBotines3.png" alt="Imagen 2"></div>
+                </div>
+
+                <!-- Navegación manual con círculos -->
+                <div class="navegacion">
+                    <label for="s1"></label>
+                    <label for="s2"></label>
+                    <label for="s3"></label>
+                    <label for="s4"></label>
+                </div>
+            </div>
+
+
         </section>
 
-        
+
 
         <!-- Sección de productos con Flexbox -->
         <section id="productos">
@@ -65,50 +78,68 @@
             <div class="productos-container">
                 <div class="producto">
                     <img src="./images/Botines/pumaBatman.jpg" alt="Producto 1">
-                    <strong><p>Puma FUTURE Z 1.3 Batman FG/AG</p></strong>
+                    <strong>
+                        <p>Puma FUTURE Z 1.3 Batman FG/AG</p>
+                    </strong>
                 </div>
                 <div class="producto">
                     <img src="./images/Botines/predatorNuevosBlancos.jpg" alt="Producto 2">
-                    <strong><p>Adidas PREDATOR Elite FG</p></strong>
+                    <strong>
+                        <p>Adidas PREDATOR Elite FG</p>
+                    </strong>
                 </div>
                 <div class="producto">
                     <img src="./images/Botines/nikeCelestes.jpg" alt="Producto 3">
-                    <strong><p>Nike Phantom Luna II Elite LV8</p></strong>
+                    <strong>
+                        <p>Nike Phantom Luna II Elite LV8</p>
+                    </strong>
                 </div>
-                 <div class="producto">
+                <div class="producto">
                     <img src="./images/Botines/f50naranjas.jpg" alt="Producto 3">
-                    <strong><p>Adidas F50 Elite Vivid Horizon</p></strong>
+                    <strong>
+                        <p>Adidas F50 Elite Vivid Horizon</p>
+                    </strong>
                 </div>
             </div>
         </section>
 
         <!-- Sección de reseñas con Grid -->
         <section id="reseñas">
-            <h2>Reseñas</h2>
+            <h2 class="h2reseñas">Reseñas</h2>
             <div class="reseñas-container">
                 <div class="card">
                     <h2>⚽ Puma FUTURE Z 1.3 Batman FG/AG</h2>
                     <h2>⭐️⭐️⭐️</h2>
                     <h2>Carlos | Delantero amateur</h2>
-                    <p>"¡Increíbles! Además del diseño brutal con temática de Batman, se sienten comodísimos desde el primer uso. El ajuste adaptativo es perfecto para mis giros rápidos y me da muchísima seguridad al disparar. Sin duda, mis favoritos del año."</p>
+                    
+                        <p>"¡Increíbles! Además del diseño brutal con temática de Batman, se sienten comodísimos desde el
+                        primer uso. El ajuste adaptativo es perfecto para mis giros rápidos y me da muchísima seguridad
+                        al disparar. Sin duda, mis favoritos del año."</p>
+                    
                 </div>
-                <div class="card">
+              <div class="card">
                     <h2>⚽ Adidas PREDATOR Elite FG</h2>
                     <h2>⭐️⭐️⭐️⭐️⭐️</h2>
-                    <h2>Martina | Mediocampista en equipo universitario</h2>
-                    <p>"La precisión al pasar y patear con estos Predator es otro nivel. Se nota la calidad en cada detalle y la suela me da una tracción excelente en césped natural. Son ligeros pero firmes, justo lo que necesitaba. ¡Una compra 10/10!"</p>
+                    <h2>Martina | Mediocampista</h2>
+                    <p>"La precisión al pasar y patear con estos Predator es otro nivel. Se nota la calidad en cada
+                        detalle y la suela me da una tracción excelente en césped natural. Son ligeros pero firmes,
+                        justo lo que necesitaba. ¡Una compra 10/10!"</p>
                 </div>
-                <div class="card">
+                  <div class="card">
                     <h2>⚽ Nike Phantom Luna II Elite LV8</h2>
                     <h2>⭐️⭐️⭐️⭐️</h2>
                     <h2>Iván | Jugador semiprofesional</h2>
-                    <p>"El toque de balón es impresionante, se adaptan súper bien al pie y te hacen sentir conectado al juego. El diseño LV8 también se roba todas las miradas. Solo me gustaría que fueran un poco más fáciles de poner, pero una vez puestos, son una maravilla."</p>
+                    <p>"El toque de balón es impresionante, se adaptan súper bien al pie y te hacen sentir conectado al
+                        juego. El diseño LV8 también se roba todas las miradas. Solo me gustaría que fueran un poco más
+                        fáciles de poner, pero una vez puestos, son una maravilla."</p>
                 </div>
                 <div class="card">
                     <h2>⚽ Adidas F50 Elite Vivid Horizon</h2>
                     <h2>⭐️⭐️⭐️⭐️⭐️</h2>
                     <h2>Lucía | Extrema veloz</h2>
-                    <p>"Los F50 han vuelto con todo. Son ligeros como una pluma y me ayudan a ganar esos metros extra en cada pique. El diseño Vivid Horizon es espectacular, y todos en mi equipo quieren un par ahora. ¡Me siento imparable!"</p>
+                    <p>"Los F50 han vuelto con todo. Son ligeros como una pluma y me ayudan a ganar esos metros extra en
+                        cada pique. El diseño Vivid Horizon es espectacular, y todos en mi equipo quieren un par ahora.
+                        ¡Me siento imparable!"</p>
                 </div>
             </div>
         </section>
@@ -120,13 +151,13 @@
                 <form action="link_forms_pre" method="POST">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
-    
+
                     <label for="correo">Correo electrónico:</label>
                     <input type="email" id="correo" name="correo" required>
-    
+
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" required></textarea>
-    
+
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -139,4 +170,5 @@
     </footer>
     <a href="#arriba" class="boton-subir" title="Volver arriba">↑</a>
 </body>
+
 </html>
