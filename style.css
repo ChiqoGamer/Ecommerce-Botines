@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 
@@ -7,31 +8,42 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f8cac3;
+    padding: 0;    
+    background-image: url(https://silicon.createx.studio/assets/img/landing/intro/hero/bg.jpg);   
+    background-size: 100% 100%;   
 }
+
 
 /* Estilo para el header */
 header {
-    background-color: #4d303b;
+    background-color: #0b0f19;
     color: white;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     padding: 1%;
-    display: flex;    
-    /* position: sticky;    
-    top: -1px; */
+    display: flex;  
+    justify-content: space-between;         
+    position: sticky;    
+    top: -1px;
+    z-index: 1000;
+}
+
+header div{
+    display: flex;
+    gap: 3px;
 }
 
 header a img {
     width: 8rem;
+    transition: transform 0.3s ease;
+}
+
+header a img:hover {
+    transform: scale(1.1);
 }
 
 nav {
-    width: 50vh;
-    padding-left: 3rem;
-    display: flex;
-    justify-content: flex-start;
+    display: flex;   
 
 }
 
@@ -65,6 +77,22 @@ nav ul li a:hover {
     /*  opacity: 1;   */
 }
 
+.redes{
+    display: flex;    
+    align-items: center;  
+    gap: 1rem;        
+}
+
+.redes a{
+    color: #ccc;    
+    transition: transform 0.3s ease;          
+}
+
+.redes a:hover{
+    transform: scale(1.3);
+}
+
+
 #inicio {
     display: flex;
     flex-direction: column;
@@ -72,24 +100,15 @@ nav ul li a:hover {
     align-items: center;
 }
 
-#inicio h2 {
-    background-color: #4d303b;
-    color: white;
-    width: 50%;
-    border-radius: 20px;
-    padding: 0.5rem;
-    margin: 5rem 0 2rem;
-    text-align: center;
-}
-
-
 /* Estilo para la sección de productos */
 #productos {
     padding: 2%;
     margin: 5%;
     border-radius: 30px;
-    background-color: #f8d6d1;
-    text-align: center;
+    text-align: center;    
+    color: white; 
+    background-color: #33354d;
+    background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 101, 241, 0.075) 100%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.103) 82.52%);
 }
 
 #productos h2 {
@@ -98,29 +117,32 @@ nav ul li a:hover {
 
 .productos-container {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 4rem;
+    justify-content: space-around;
+    align-content: center;    
+    gap: 2rem;    
+    
 }
 
 .producto {
     text-align: center;
     margin: 0px;
-    padding: 1rem;
+    padding: 2rem;
     padding-bottom: 0;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    background-color: #d69098;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-
-    
+    background-color: #33354d;
+    background-color: #0b0f19;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);  
+       
+    width: 20rem;   
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
 }
 
 .producto p {
-    padding: 1rem;
-
+    padding: 1rem;    
 }
 
 .producto:hover {
@@ -128,28 +150,28 @@ nav ul li a:hover {
 }
 
 .producto img {
-    width: 20rem;
-    height: 23rem;
-    margin: 2rem;
+    width: 100%;
+    height: auto;
+    
     border-radius: 30px;
 }
 
 /* Estilo para la sección de reseñas usando Grid */
 #reseñas {
-    padding: 2%;
-    margin: 0px 5%;
-    border-radius: 30px;
-    background-color: #f8d6d1;
-    text-align: center;
+    padding: 2rem 0 5rem;       
+    background-color:#33354d;;
+    text-align: center;    
+    text-size-adjust: auto;
 }
 
 .h2reseñas {
     margin: 0 0 5rem;
+    color: white;
 }
 
 .reseñas-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 4rem;
     /* align-items: center;    */
@@ -158,12 +180,10 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
 }
 
-
-
 .card {
-    width: 20rem;
-    height: 20rem;
-
+    width: 20rem;   
+    height: 20rem; 
+font-size: 90%;     
     padding: 2%;
     background-color: white;
     border: 0.1rem solid #ddd;
@@ -177,8 +197,7 @@ nav ul li a:hover {
     gap: 1rem;
 }
 
-.card h2,
-p {
+.card h2,p {
     margin: 0;
 }
 
@@ -191,7 +210,7 @@ p {
 }
 
 .form-contacto {
-    background-color: #95656e;
+    background-color: #0b0f19;
     border-radius: 20px;
     padding: 3rem;
     color: white;
@@ -205,11 +224,12 @@ p {
 
 form {
     text-align: left;
-    background-color: #d69098;
+    background-color: #33354d28;
+    background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 101, 241, 0.062) 100%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.103) 82.52%);
     border-radius: 10px;
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     gap: 10px;
     padding: 2rem 0;
 }
@@ -235,23 +255,27 @@ form textarea {
 form button {
     margin-top: 40px;
     padding: 20px 10px;
-    background-color: #4CAF50;
+    background-color: #6366f1;
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+
+    position: relative;
+    left: 10%;
+    width: 80%;
 }
 
 form button:hover {
-    background-color: #347a3e;
+    background-color: #4044ee;
     transform: scale(1.05);
 
 }
 
 /* Estilo para el footer */
 footer {
-    background-color: #333;
+    background-color: #33333300;
     color: white;
     text-align: center;
     padding: 20px 0px;
@@ -266,7 +290,7 @@ footer {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: #40a04ddc;
+    background: #333333;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -278,28 +302,27 @@ footer {
     transition: background-color 0.3s;
     opacity: 0.3;
     transition: opacity 0.3s;
+    
 }
 
 .boton-subir:hover {
-    background-color: #40a04ddc;
+    background-color: #333333;
     opacity: 1;
 }
 
 .carrusel {
     width: 100%;
-    max-width: 70%;
-    margin: auto;
+    max-width: 100%;    
+    margin: 0 auto;
     position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.8);
+    overflow: hidden;    
 }
 
 .slides {
     display: flex;
     width: 100%;
     transition: transform 0.5s ease-in-out;
+    animation: slide 15s infinite;
 }
 
 .slide {
@@ -310,6 +333,15 @@ footer {
 .slide img {
     width: 100%;
     display: block;
+}
+
+/* Animación que recorre las imágenes */
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  100% { transform: translateX(0%) }
 }
 
 /* Radio buttons */
@@ -363,8 +395,8 @@ input[type="radio"] {
     background: #333;
 }
 
-/* Media Queries para adaptabilidad en pantallas pequeñas */
-@media (max-width: 767px) {
+/* Media Queries para adaptabilidad en tablets */
+@media (max-width: 992px) {
     .productos-container {
         flex-direction: column;
         align-items: center;
@@ -380,11 +412,11 @@ input[type="radio"] {
     }
 }
 
-
-@media (max-width: 500px) {
+/* CELULAR */
+@media (max-width: 600px) {
     header{
         justify-content: center;
-    }
+    }    
 
     nav{
         padding: 0;        
@@ -399,4 +431,12 @@ input[type="radio"] {
     header a img {
         width: 0px;
     }
+
+    .redes a svg{
+    width: 0px;
+}
+
+    .producto {            
+    width: 70%;    
+}
 }
