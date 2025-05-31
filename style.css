@@ -64,7 +64,7 @@ header a img:hover {
     width: 100%;
     background: #6366f1;
     border-radius: 2px;
-    transition: 0.3s;    
+    transition: 0.3s;
 }
 
 .menu-icon span:nth-child(1) {
@@ -152,35 +152,40 @@ nav ul li a:hover {
     margin: 0 0 5rem;
 }
 
-.productos-container {
+/* .productos-container {
     display: flex;
     justify-content: space-around;
     align-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+} */
 
+.productos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .producto {
-    text-align: center;
     margin: 0px;
-    padding: 2rem;
-    padding-bottom: 0;
+    padding: 10% 10% 8%;
     border-radius: 30px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    background-color: #33354d;
     background-color: #0b0f19;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 
-    width: 20rem;
+
+
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 
-.producto p {
-    padding: 1rem;
+.producto strong {
+    padding: 3rem 0 1rem;
 }
 
 .producto:hover {
@@ -188,10 +193,12 @@ nav ul li a:hover {
 }
 
 .producto img {
-    width: 100%;
-    height: auto;
-
     border-radius: 30px;
+    width: 100%;
+    aspect-ratio: 345 / 430;
+    object-fit: cover;
+    border-radius: 30px;
+    display: block;
 }
 
 /* Estilo para la sección de reseñas usando Grid */
@@ -467,15 +474,15 @@ input[type="radio"] {
 }
 
 /* CELULAR */
-@media (max-width: 600px) {    
+@media (max-width: 600px) {
     nav {
         position: absolute;
         top: 78px;
         left: 0;
         width: 100%;
         flex-direction: column;
-        background-color: #0b0f19;        
-        transform: translateY(-130%);        
+        background-color: #0b0f19;
+        transform: translateY(-130%);
         transition: transform 0.3s ease-in-out;
     }
 
@@ -488,42 +495,70 @@ input[type="radio"] {
     }
 
     nav a {
-        padding: 15px;        
+        padding: 15px;
     }
+
     /* Animación del icono cuando se activa */
     #menu-toggle:checked+.menu-icon span:nth-child(1) {
         transform: rotate(45deg);
         top: 10px;
     }
-    
+
     #menu-toggle:checked+.menu-icon span:nth-child(2) {
         opacity: 0;
     }
-    
+
     #menu-toggle:checked+.menu-icon span:nth-child(3) {
         transform: rotate(-45deg);
         top: 10px;
-    }           
-    
+    }
+
     nav ul {
-        flex-direction: column;                
+        flex-direction: column;
         gap: 30px;
         margin: 20px 0 50px;
-        font-size: 25px;      
-    }    
-    
+        font-size: 25px;
+    }
+
     .redes a svg {
         display: none;
         width: 0;
     }
 
-    .boton-subir{
+    .boton-subir {
         display: none;
     }
-    
-    
+
+    #productos {
+        padding: 1rem 2rem 2rem;
+    }
+
+    #productos h2 {
+        margin-bottom: 2rem;
+    }
+
+    .productos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
     .producto {
-        width: 70%;
+        font-size: 0.5rem;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .producto img {
+        border-radius: 5px;
+    }
+
+    .producto strong {
+        padding: 1rem 0 0.5rem;
     }
 }
 
+@media ((min-width: 600px) and (max-width: 1024px)) {
+    .producto {
+        font-size: 0.5rem;
+    }
+}
