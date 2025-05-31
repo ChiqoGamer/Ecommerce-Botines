@@ -8,9 +8,9 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;    
-    background-image: url(https://silicon.createx.studio/assets/img/landing/intro/hero/bg.jpg);   
-    background-size: 100% 100%;   
+    padding: 0;
+    background-image: url(https://silicon.createx.studio/assets/img/landing/intro/hero/bg.jpg);
+    background-size: 100% 100%;
 }
 
 
@@ -20,21 +20,23 @@ header {
     color: white;
     box-sizing: border-box;
     width: 100%;
-    padding: 1%;
-    display: flex;  
-    justify-content: space-between;         
-    position: sticky;    
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
     top: -1px;
     z-index: 1000;
 }
 
-header div{
+header div {
     display: flex;
     gap: 3px;
 }
 
 header a img {
     width: 8rem;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -42,9 +44,44 @@ header a img:hover {
     transform: scale(1.1);
 }
 
-nav {
-    display: flex;   
+#menu-toggle {
+    display: none;
+}
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+.menu-icon span {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #6366f1;
+    border-radius: 2px;
+    transition: 0.3s;    
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+
+.menu-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
 }
 
 /* Estilo para la barra de navegación */
@@ -77,18 +114,18 @@ nav ul li a:hover {
     /*  opacity: 1;   */
 }
 
-.redes{
-    display: flex;    
-    align-items: center;  
-    gap: 1rem;        
+.redes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.redes a{
-    color: #ccc;    
-    transition: transform 0.3s ease;          
+.redes a {
+    color: #ccc;
+    transition: transform 0.3s ease;
 }
 
-.redes a:hover{
+.redes a:hover {
     transform: scale(1.3);
 }
 
@@ -105,8 +142,8 @@ nav ul li a:hover {
     padding: 2%;
     margin: 5%;
     border-radius: 30px;
-    text-align: center;    
-    color: white; 
+    text-align: center;
+    color: white;
     background-color: #33354d;
     background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 101, 241, 0.075) 100%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.103) 82.52%);
 }
@@ -118,9 +155,10 @@ nav ul li a:hover {
 .productos-container {
     display: flex;
     justify-content: space-around;
-    align-content: center;    
-    gap: 2rem;    
-    
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
 }
 
 .producto {
@@ -133,16 +171,16 @@ nav ul li a:hover {
     cursor: pointer;
     background-color: #33354d;
     background-color: #0b0f19;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);  
-       
-    width: 20rem;   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+
+    width: 20rem;
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
+    flex-direction: column;
+    align-items: center;
 }
 
 .producto p {
-    padding: 1rem;    
+    padding: 1rem;
 }
 
 .producto:hover {
@@ -152,15 +190,16 @@ nav ul li a:hover {
 .producto img {
     width: 100%;
     height: auto;
-    
+
     border-radius: 30px;
 }
 
 /* Estilo para la sección de reseñas usando Grid */
 #reseñas {
-    padding: 2rem 0 5rem;       
-    background-color:#33354d;;
-    text-align: center;    
+    padding: 2rem 0 5rem;
+    background-color: #33354d;
+    ;
+    text-align: center;
     text-size-adjust: auto;
 }
 
@@ -181,9 +220,9 @@ nav ul li a:hover {
 }
 
 .card {
-    width: 20rem;   
-    height: 20rem; 
-font-size: 90%;     
+    width: 20rem;
+    height: 20rem;
+    font-size: 90%;
     padding: 2%;
     background-color: white;
     border: 0.1rem solid #ddd;
@@ -197,7 +236,8 @@ font-size: 90%;
     gap: 1rem;
 }
 
-.card h2,p {
+.card h2,
+p {
     margin: 0;
 }
 
@@ -229,7 +269,7 @@ form {
     border-radius: 10px;
     display: grid;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     gap: 10px;
     padding: 2rem 0;
 }
@@ -302,7 +342,7 @@ footer {
     transition: background-color 0.3s;
     opacity: 0.3;
     transition: opacity 0.3s;
-    
+
 }
 
 .boton-subir:hover {
@@ -312,10 +352,10 @@ footer {
 
 .carrusel {
     width: 100%;
-    max-width: 100%;    
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .slides {
@@ -337,11 +377,25 @@ footer {
 
 /* Animación que recorre las imágenes */
 @keyframes slide {
-  0%   { transform: translateX(0%); }
-  25%  { transform: translateX(-100%); }
-  50%  { transform: translateX(-200%); }
-  75%  { transform: translateX(-300%); }
-  100% { transform: translateX(0%) }
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0%)
+    }
 }
 
 /* Radio buttons */
@@ -413,30 +467,63 @@ input[type="radio"] {
 }
 
 /* CELULAR */
-@media (max-width: 600px) {
-    header{
-        justify-content: center;
-    }    
-
-    nav{
-        padding: 0;        
-        justify-content: center;
+@media (max-width: 600px) {    
+    nav {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #0b0f19;        
+        transform: translateY(-130%);        
+        transition: transform 0.3s ease-in-out;
     }
 
+    #menu-toggle:checked~nav {
+        transform: translateY(0);
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav a {
+        padding: 15px;        
+    }
+    /* Animación del icono cuando se activa */
+    #menu-toggle:checked+.menu-icon span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+    
+    #menu-toggle:checked+.menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked+.menu-icon span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 10px;
+    }           
+    
     nav ul {
         flex-direction: column;                
-        gap: 10px;
+        gap: 30px;
+        margin: 20px 0 50px;
+        font-size: 25px;      
+    }    
+    
+    .redes a svg {
+        display: none;
+        width: 0;
     }
 
-    header a img {
-        width: 0px;
+    .boton-subir{
+        display: none;
     }
-
-    .redes a svg{
-    width: 0px;
+    
+    
+    .producto {
+        width: 70%;
+    }
 }
 
-    .producto {            
-    width: 70%;    
-}
-}
