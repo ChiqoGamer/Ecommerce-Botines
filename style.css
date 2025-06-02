@@ -45,7 +45,37 @@ header a img:hover {
     transform: scale(1.1);
 }
 
-#menu-toggle {
+header button {
+    display: none;
+}
+
+
+/*
+nav {
+    width: 70%;   
+    height: 100%;
+    left: auto;
+    background:#6366f1;
+    border: none;
+    translate: 100% 0;
+    transition: translate 0.6s, display 0.6s ease-out allow-discrete;    
+}
+
+nav:popover-open {
+    translate: 0 0;
+    @starting-style {
+        translate: 100% 0;
+    }
+}
+
+#menu ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    font-size: 2rem;
+} */
+
+/* #menu-toggle {
     display: none;
 }
 
@@ -78,12 +108,7 @@ header a img:hover {
 
 .menu-icon span:nth-child(3) {
     top: 20px;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
+} */
 
 /* Estilo para la barra de navegación */
 nav ul {
@@ -97,7 +122,6 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-
 }
 
 nav ul li a {
@@ -106,8 +130,6 @@ nav ul li a {
     font-weight: bold;
     padding: 0.5rem;
     border-radius: 10px;
-
-
 }
 
 nav ul li a:hover {
@@ -136,6 +158,15 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.producto button {
+    background-color: #6366f1;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 2rem;
+    position: relative;
 }
 
 /* Estilo para la sección de productos */
@@ -176,10 +207,6 @@ nav ul li a:hover {
     cursor: pointer;
     background-color: #0b0f19;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-
-
-
-
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -195,11 +222,29 @@ nav ul li a:hover {
 
 .producto img {
     border-radius: 30px;
-    width: 100%;    
+    width: 100%;
     aspect-ratio: 345 / 345;
     object-fit: cover;
     display: block;
     border-radius: 30px;
+}
+
+.producto button {
+    align-self: center;
+    /* o margin: 0 auto; */
+    padding: 0.5rem 1.2rem;
+    background-color: #6366f1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: azure;
+    color: #4f46e5;
 }
 
 /* Estilo para la sección de reseñas usando Grid */
@@ -221,6 +266,8 @@ nav ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 4rem;
+
+
     /* align-items: center;    */
 
     /* display: grid;
@@ -271,7 +318,7 @@ p {
 }
 
 form {
-    
+
     background-color: #33354d28;
     background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 101, 241, 0.062) 100%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.103) 82.52%);
     border-radius: 10px;
@@ -279,32 +326,34 @@ form {
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-    align-items: center;    
+    align-items: center;
     gap: 10px;
     padding: 2rem 0;
 }
 
 form label {
-  width: 100%;
-  max-width: 50%;
-  min-width: 180px;
-  text-align: left;  
-  position: relative;
-  left: -10px; 
+    width: 100%;
+    max-width: 50%;
+    min-width: 180px;
+    text-align: left;
+    position: relative;
+    left: -10px;
 }
 
 
-form input,form textarea {
+form input,
+form textarea {
 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    resize: none;    
+    resize: none;
     width: 90%;
     max-width: 50%;
     min-width: 180px;
     margin-bottom: 20px;
 }
+
 form textarea {
     height: 60px;
 }
@@ -319,8 +368,8 @@ form button {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    
-    width: 20%;    
+
+    width: 20%;
     max-width: 20%;
 }
 
@@ -432,15 +481,6 @@ footer {
     transform: translateX(-300%);
 }
 
-/* Indicador activo */
-#s1:checked~.navegacion label[for="s1"],
-#s2:checked~.navegacion label[for="s2"],
-#s3:checked~.navegacion label[for="s3"],
-#s4:checked~.navegacion label[for="s4"] {
-    opacity: 1;
-    background: #333;
-}
-
 /* Media Queries para adaptabilidad en tablets */
 @media (max-width: 992px) {
     .productos-container {
@@ -458,9 +498,10 @@ footer {
     }
 }
 
+
 /* CELULAR */
 @media (max-width: 600px) {
-    nav {
+    /* nav {
         position: absolute;
         top: 78px;
         left: 0;
@@ -481,10 +522,10 @@ footer {
 
     nav a {
         padding: 15px;
-    }
+    } */
 
     /* Animación del icono cuando se activa */
-    #menu-toggle:checked+.menu-icon span:nth-child(1) {
+    /* #menu-toggle:checked+.menu-icon span:nth-child(1) {
         transform: rotate(45deg);
         top: 10px;
     }
@@ -496,6 +537,43 @@ footer {
     #menu-toggle:checked+.menu-icon span:nth-child(3) {
         transform: rotate(-45deg);
         top: 10px;
+    } */
+    header button {
+        display: block;
+        background: transparent;
+        border: none;
+        float: right;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+
+    }
+
+    nav {
+        width: 65%;
+        height: 100%;
+        left: auto;
+        background: #6366f1;
+        border: none;
+        translate: 100% 0;
+        transition: translate 0.6s, display 0.6s ease-out allow-discrete;
+    }
+
+    nav:popover-open {
+        translate: 0 0;
+
+        @starting-style {
+            translate: 100% 0;
+        }
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+        font-size: 2rem;
     }
 
     nav ul {
@@ -524,8 +602,8 @@ footer {
 
     .productos-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;  
-        row-gap: 1rem;     
+        gap: 0.5rem;
+        row-gap: 1rem;
     }
 
     .producto {
@@ -542,13 +620,41 @@ footer {
         padding: 1rem 0 0.5rem;
     }
 
- 
+    .producto button {
+        font-size: 8px;
+        padding: 0.4rem 1rem;
+        width: 100%;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .reseñas-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        row-gap: 20px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: 90%;
+        font-size: 45%;
+        padding: 2%;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .h2reseñas {
+        margin-bottom: 10%;
+    }
 
 
-form button {  
-    min-width: 40%;     
-    width: 90%;        
-}
+    form button {
+        min-width: 40%;
+        width: 90%;
+    }
 }
 
 @media ((min-width: 600px) and (max-width: 1024px)) {
