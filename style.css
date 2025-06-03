@@ -203,7 +203,13 @@ nav ul li a:hover {
 
 .producto strong {
     padding: 3rem 0 1rem;
+    font-weight: lighter;
 }
+
+/* .precio{
+    font-weight: bold;
+    font-size: 1.5rem;
+} */
 
 .producto:hover {
     transform: scale(1.1);
