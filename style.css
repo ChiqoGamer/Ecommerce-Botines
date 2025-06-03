@@ -11,7 +11,7 @@ body {
     padding: 0;
     background-image: url(https://silicon.createx.studio/assets/img/landing/intro/hero/bg.jpg);
     background-size: 100% 100%;
-    background-color: #0b0f19;
+    background-color: #0b0f19;    
 }
 
 
@@ -22,12 +22,11 @@ header {
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: flex;   
     align-items: center;
     position: sticky;
     top: -1px;
-    z-index: 1000;
+    z-index: 10;
 }
 
 header div {
@@ -35,83 +34,90 @@ header div {
     gap: 3px;
 }
 
-header a img {
-    width: 8rem;
-    object-fit: contain;
+.logo {
+    height: 50px;
     transition: transform 0.3s ease;
 }
 
-header a img:hover {
+.logo:hover {
     transform: scale(1.1);
 }
 
-header button {
+/* Checkbox oculto */
+.menu-toggle {
     display: none;
 }
 
-
-/*
-nav {
-    width: 70%;   
-    height: 100%;
-    left: auto;
-    background:#6366f1;
-    border: none;
-    translate: 100% 0;
-    transition: translate 0.6s, display 0.6s ease-out allow-discrete;    
-}
-
-nav:popover-open {
-    translate: 0 0;
-    @starting-style {
-        translate: 100% 0;
-    }
-}
-
-#menu ul{
+/* Icono hamburguesa */
+.menu-icon {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    font-size: 2rem;
-} */
-
-/* #menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    width: 30px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    right: 20px;
-    top: 25px;
+    right: 0;
+    margin-right: 1rem;
+    z-index: 1001;
 }
 
 .menu-icon span {
     position: absolute;
-    height: 4px;
-    width: 100%;
+    width: 30px;
+    height: 3px;
     background: #6366f1;
     border-radius: 2px;
-    transition: 0.3s;
+    transition: all 0.4s ease;
 }
 
+/* Posiciones iniciales */
 .menu-icon span:nth-child(1) {
-    top: 0;
-}
-
-.menu-icon span:nth-child(2) {
     top: 10px;
 }
 
+.menu-icon span:nth-child(2) {
+    top: 18px;
+}
+
 .menu-icon span:nth-child(3) {
-    top: 20px;
-} */
+    top: 26px;
+}
+
+/* Al activar el checkbox: transformar a X */
+.menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 18px;
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 18px;
+}
+
+/* Menú lateral (móvil) */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: #111; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-left: 50px;
+}
 
 /* Estilo para la barra de navegación */
-nav ul {
+.menu ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -130,34 +136,25 @@ nav ul li a {
     font-weight: bold;
     padding: 0.5rem;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    /*  opacity: 1;   */
+    background-color: rgba(255, 255, 255, 0.2);   
 }
 
-.redes {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+/* Mostrar menú al activar checkbox */
+.menu-toggle:checked ~ .menu {
+    right: 0;
 }
 
-.redes a {
-    color: #ccc;
-    transition: transform 0.3s ease;
-}
-
-.redes a:hover {
-    transform: scale(1.3);
-}
-
-
-#inicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.user-shop{
+    color: #6366f1;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    gap: 20px;
 }
 
 .producto button {
@@ -183,14 +180,6 @@ nav ul li a:hover {
 #productos h2 {
     margin: 0 0 5rem;
 }
-
-/* .productos-container {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-} */
 
 .productos-container {
     display: grid;
@@ -230,8 +219,7 @@ nav ul li a:hover {
 }
 
 .producto button {
-    align-self: center;
-    /* o margin: 0 auto; */
+    align-self: center;    
     padding: 0.5rem 1.2rem;
     background-color: #6366f1;
     border: none;
@@ -266,12 +254,6 @@ nav ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 4rem;
-
-
-    /* align-items: center;    */
-
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
 }
 
 .card {
@@ -390,6 +372,21 @@ footer {
     width: 100%;
 }
 
+.redes{
+    margin: 2rem;
+}
+
+.redes a i{
+    color: #111;
+    font-size: 30px;
+    padding: 10px;   
+    transition: transform 0.3s ease; 
+}
+
+.redes a i:hover {
+    transform: scale(1.2);
+}
+
 .boton-subir {
     position: fixed;
     bottom: 30px;
@@ -481,17 +478,72 @@ footer {
     transform: translateX(-300%);
 }
 
+/* === MEDIA QUERY: Pantallas mayores a 1024px === */
+@media (min-width: 1025px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    /* Ocultar ícono hamburguesa */
+    .menu-icon {
+        display: none;
+    }
+
+    /* Menú horizontal dentro del header */
+    .menu {
+        position: static;
+        display: block;
+        height: auto;
+        width: auto;
+        background: transparent;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .menu a {        
+        font-size: 16px;
+    }
+}
+
 /* Media Queries para adaptabilidad en tablets */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu {
+        display: flex;  
+        justify-content: left;  
+        width: 60%;        
+    }
+
+    .menu ul{
+        display: flex; 
+        flex-direction: column;  
+        margin-top: 12rem;
+        gap: 3rem;
+    }    
+    
+    .fa-circle-user{
+        color: #0b0f19;
+    }
+
+    .fa-shop{
+        color: white;
+        margin-right: 10px;        
+    }
+
     .productos-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;        
     }
 
     .reseñas-container {
         grid-template-columns: 1fr;
     }
-
 
     .form-contacto {
         width: 85%;
@@ -500,93 +552,7 @@ footer {
 
 
 /* CELULAR */
-@media (max-width: 600px) {
-    /* nav {
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: #0b0f19;
-        transform: translateY(-130%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    #menu-toggle:checked~nav {
-        transform: translateY(0);
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    nav a {
-        padding: 15px;
-    } */
-
-    /* Animación del icono cuando se activa */
-    /* #menu-toggle:checked+.menu-icon span:nth-child(1) {
-        transform: rotate(45deg);
-        top: 10px;
-    }
-
-    #menu-toggle:checked+.menu-icon span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #menu-toggle:checked+.menu-icon span:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 10px;
-    } */
-    header button {
-        display: block;
-        background: transparent;
-        border: none;
-        float: right;
-        cursor: pointer;
-        padding: 0;
-        position: absolute;
-        top: 15px;
-        right: 10px;
-
-    }
-
-    nav {
-        width: 65%;
-        height: 100%;
-        left: auto;
-        background: #6366f1;
-        border: none;
-        translate: 100% 0;
-        transition: translate 0.6s, display 0.6s ease-out allow-discrete;
-    }
-
-    nav:popover-open {
-        translate: 0 0;
-
-        @starting-style {
-            translate: 100% 0;
-        }
-    }
-
-    #menu ul {
-        display: flex;
-        flex-direction: column;
-        margin-top: 4rem;
-        font-size: 2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 30px;
-        margin: 20px 0 50px;
-        font-size: 25px;
-    }
-
-    .redes a svg {
-        display: none;
-        width: 0;
-    }
+@media (max-width: 600px) {   
 
     .boton-subir {
         display: none;
@@ -655,6 +621,15 @@ footer {
         min-width: 40%;
         width: 90%;
     }
+
+    .redes{
+    margin: 0.5rem;
+}
+
+.redes a i{    
+    font-size: 25px;      
+    padding: 5px;
+}
 }
 
 @media ((min-width: 600px) and (max-width: 1024px)) {
