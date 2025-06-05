@@ -157,8 +157,49 @@ nav ul li a:hover {
     gap: 20px;
 }
 
+.buscar{   
+    /* width: 100%;
+    color: #ffffff;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;     */
+    margin-right: 1rem;
+    width: 20rem;
+    color: #6366f1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    
+
+}
+
+.buscar input{
+    width: 100%;
+    background: none;
+    border: 0;
+    color: #ffffff; 
+
+}
+
+.barra{    
+    background-color: #6365f186;
+    width: 75%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: 0;    
+}
+
 .producto button {
-    background-color: #6366f1;
+    background-color: #6365f1;
     border: none;
     border-radius: 5px;
     padding: 1rem;
