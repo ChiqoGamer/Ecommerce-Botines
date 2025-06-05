@@ -112,8 +112,7 @@ header div {
     justify-content: center;
     align-items: center;
     transition: right 0.3s ease;
-    z-index: 1000;
-    padding-left: 50px;
+    z-index: 1000;    
 }
 
 /* Estilo para la barra de navegación */
@@ -157,34 +156,20 @@ nav ul li a:hover {
     gap: 20px;
 }
 
-.buscar{   
-    /* width: 100%;
-    color: #ffffff;
-    border: 0;
-    height: 1.1876em;
-    margin: 0;
-    display: block;
-    padding: 6px 0 7px;
-    min-width: 0;
-    background: none;
-    box-sizing: content-box;
-    animation-name: mui-auto-fill-cancel;
-    letter-spacing: inherit;
-    animation-duration: 10ms;     */
+.buscar{     
     margin-right: 1rem;
     width: 20rem;
     color: #6366f1;
     display: flex;
     align-items: center;
-    padding-bottom: 0.5rem;
-    
-
+    padding-bottom: 0.5rem;    
 }
 
 .buscar input{
     width: 100%;
     background: none;
     border: 0;
+    outline: 0;
     color: #ffffff; 
 
 }
@@ -462,27 +447,35 @@ footer {
 
 .carrusel {
     width: 100%;
-    max-width: 100%;
+    max-width: 100%;    
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;    
+    height: 40vw;
+    
 }
 
 .slides {
     display: flex;
-    width: 100%;
+    width: 100%;    
     transition: transform 0.5s ease-in-out;
-    animation: slide 15s infinite;
+    animation: slide 15s infinite;   
+    height: 100%;
+    object-fit: contain; 
 }
 
 .slide {
     width: 100%;
+    height: 100%;
     flex-shrink: 0;
+    object-fit: contain;
 }
 
 .slide img {
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
 }
 
 /* Animación que recorre las imágenes */
@@ -548,24 +541,23 @@ footer {
     .menu {
         display: flex;
         justify-content: left;
-        width: 60%;
+        width: 60%;        
     }
 
     .menu ul {
         display: flex;
         flex-direction: column;
-        margin-top: 12rem;
+        margin-top: 6rem;
         gap: 3rem;
     }
 
-    .fa-circle-user {
+    #user{
         color: #0b0f19;
     }
 
-    .fa-shop {
-        color: white;
-        margin-right: 10px;
-    }
+    .material-icons{
+        color: white;        
+    }  
 
     .productos-container {
         flex-direction: column;
@@ -583,6 +575,10 @@ footer {
 
 /* CELULAR */
 @media (max-width: 600px) {
+
+    .buscar{
+        display: none;
+    }
 
     .boton-subir {
         display: none;
