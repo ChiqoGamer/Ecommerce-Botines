@@ -147,6 +147,32 @@ nav ul li a:hover {
     right: 0;
 }
 
+.icono-carrito {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; /* o un color específico, como #000 */  
+}
+
+#contador-carrito {
+  display: none; /* Oculto al inicio */
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color:white;  
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+}
+
+.icono-carrito i {
+  font-size: 30px;
+}
+
 .user-shop {
     color: #6366f1;
     font-size: 25px;
@@ -154,6 +180,7 @@ nav ul li a:hover {
     right: 20px;
     cursor: pointer;
     gap: 20px;
+    text-decoration: none;
 }
 
 .buscar{     
@@ -207,14 +234,14 @@ nav ul li a:hover {
     margin: 0 0 5rem;
 }
 
-.productos-container {
+#contenedor-productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-.producto {
+.tarjeta-producto{
     margin: 0px;
     padding: 10% 10% 8%;
     border-radius: 30px;
@@ -237,11 +264,11 @@ nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-.producto:hover {
-    transform: scale(1.1);
+.tarjeta-producto:hover {
+    transform: scale(1.05);
 }
 
-.producto img {
+#contenedor-productos img {
     border-radius: 30px;
     width: 100%;
     aspect-ratio: 345 / 345;
@@ -250,7 +277,7 @@ nav ul li a:hover {
     border-radius: 30px;
 }
 
-.producto button {
+#contenedor-productos button {
     align-self: center;
     padding: 0.5rem 1.2rem;
     background-color: #6366f1;
@@ -262,7 +289,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-.producto button:hover {
+#contenedor-productos button:hover {
     background-color: azure;
     color: #4f46e5;
 }
@@ -499,6 +526,28 @@ footer {
     100% {
         transform: translateX(0%)
     }
+}
+
+/* ALERTA PERZONALIZABLE */
+.alerta-oculta {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.alerta-mostrar {
+  display: block;
+  opacity: 1;
 }
 
 /* === MEDIA QUERY: Pantallas mayores a 1024px === */

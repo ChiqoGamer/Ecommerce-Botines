@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPDL Botines</title>
+    <link rel="shortcut icon" href="./images/icoBotines.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Importando fuente de Google Fonts -->    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Meta descripción (útil para buscadores también) -->
+    <meta name="description" content="Pagina web dedicada a la comercializacion de botines de futbol">
+
+    <!-- Open Graph (para Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="EPDL Botines">
+    <meta property="og:description" content="Pagina web dedicada a la comercializacion de botines de futbol">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ChiqoGamer/Ecommerce-Botines/refs/heads/main/images/el_pibe_logoComp.png">
+    <meta property="og:url" content="https://chiqogamer.github.io/Ecommerce-Botines">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Encabezado con la etiqueta header -->
+    <header>
+        <!-- Logo a la izquierda -->
+        <a href="./index.html"> <img src="./images/el_pibe_logo.png" alt="Imagen principal" class="logo"> </a>
+
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+        <!-- Icono de hamburguesa a la derecha -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-shop">
+            <div class="buscar">
+                <input type="text" placeholder="Buscar...">
+                <i class="material-icons">search</i>
+                <div class="barra"></div>
+            </div>
+            
+             <a href="./carrito.html" class="icono-carrito"> <i class="material-icons">shopping_cart</i> </a>   
+            <p>
+                <!-- Cantidad de elementos en localStorage: -->
+                <span id="contador-carrito">0</span>
+            </p> 
+            
+            <i id="user" class="material-icons" style="font-size: 30px;">account_circle</i>         
+        </div>        
+    </header>
+
+    <!-- Sección principal de la página -->
+    <main>                    
+       <h2>CARRITO DE COMPRAS</h2>
+       <section id="contenedor-carrito">
+        <!-- PRODUCTOS DEL CARRITO -->
+       </section>
+       <div id="acciones-carrito">
+        <!-- BOTONES DE ELIMINAR Y FINALIZAR COMPRA DESDE JS -->
+       </div>
+       <section id="resumen-carrito">
+        <!-- ACA VA EL RESUMEN DEL CARRITO -->
+       </section>
+
+    </main>
+
+    <!-- Pie de página con información -->
+    <footer>
+        <div class="redes">
+            <a href="https://www.instagram.com/elpibedelosbotines/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=541125442653" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/channel/UCn25P8Eg1Ajw9PLPCJWTASA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@nicolas_siri?lang=es" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://x.com/NicolasSiri" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/joel-moran/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/ChiqoGamer" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 ChiqoGamer | EPDL Botines</p>
+    </footer>
+    <a href="#inicio" class="boton-subir" title="Volver arriba"> <i class="fa-solid fa-angle-left fa-rotate-90"></i>
+    </a>
+
+    <script src="carrito.js"></script>
+
+</body>
+
+</html>
