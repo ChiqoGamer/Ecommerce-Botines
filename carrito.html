@@ -40,10 +40,10 @@
 
         <nav class="menu">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#productos">Productos</a></li>
+                <li><a href="index.html#reseñas">Reseñas</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
         <div class="user-shop">
@@ -53,29 +53,35 @@
                 <div class="barra"></div>
             </div>
             
-             <a href="./carrito.html" class="icono-carrito"> <i class="material-icons">shopping_cart</i> </a>   
-            <p>
-                <!-- Cantidad de elementos en localStorage: -->
-                <span id="contador-carrito">0</span>
-            </p> 
+           <a href="./carrito.html" class="icono-carrito">  
+                <i class="material-icons">shopping_cart</i> 
+                <span id="contador-carrito">0</span> 
+            </a>
             
             <i id="user" class="material-icons" style="font-size: 30px;">account_circle</i>         
         </div>        
     </header>
 
     <!-- Sección principal de la página -->
-    <main>                    
-       <h2>CARRITO DE COMPRAS</h2>
-       <section id="contenedor-carrito">
-        <!-- PRODUCTOS DEL CARRITO -->
-       </section>
-       <div id="acciones-carrito">
-        <!-- BOTONES DE ELIMINAR Y FINALIZAR COMPRA DESDE JS -->
+    <main id="seccion-principal">                    
+       <h2 class="titulo-carrito">CARRITO DE COMPRAS</h2>
+       <div class="descripción-resumen">  
+           <section class="descripcion">
+                <h3 id="descripcion" style="color: aliceblue;">Descripción de tu pedido</h3>
+                <section id="contenedor-carrito">            
+                 <!-- PRODUCTOS DEL CARRITO -->
+                </section>
+            </section>          
+           <section id="resumen-carrito">
+               <!-- ACA VA EL RESUMEN DEL CARRITO -->   
+                <h3>Resumen de tu compra</h3> 
+                <p>Productos</p>
+                <p>TOTAL</p> 
+               <div id="acciones-carrito">
+                <!-- BOTONES DE ELIMINAR Y FINALIZAR COMPRA DESDE JS -->
+               </div>
+           </section>
        </div>
-       <section id="resumen-carrito">
-        <!-- ACA VA EL RESUMEN DEL CARRITO -->
-       </section>
-
     </main>
 
     <!-- Pie de página con información -->
