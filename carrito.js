@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         let seccionProductos = document.getElementById("contenedor-carrito")
         seccionProductos.innerHTML= ""
 
+        let precioTotal = document.getElementById("precio-total")
+        precioTotal.textContent = "0"
+
         if(!carrito.length){
             let mensajeCarrito = document.createElement("p")
             mensajeCarrito.classList.add("mensaje-carrito")
@@ -20,9 +23,10 @@ document.addEventListener("DOMContentLoaded", () =>{
             const ocultarResumen = document.getElementById("resumen-carrito")
             ocultarResumen.style.display = 'none';
             const ocultarDescripcion = document.getElementById("descripcion")
-            ocultarDescripcion.style.display= 'none';
+            ocultarDescripcion.style.display= 'none';            
+            
         }
-        else{
+        else{            
             carrito.forEach((element,index) => {
                 let tarjetaProducto= document.createElement("article")
                 tarjetaProducto.classList.add("producto-carrito")
@@ -52,8 +56,13 @@ document.addEventListener("DOMContentLoaded", () =>{
                 tarjetaProducto.appendChild(btnEliminar)
 
                 seccionProductos.appendChild(tarjetaProducto)
-            });
 
+                let cantProductos = document.getElementById("prod-totales")
+                cantProductos.textContent = carrito.length
+                
+                precioTotal.textContent = Number(precioTotal.textContent) +  element.price               
+            });
+            
         }
         actualizarAgregados(carrito)
         renderizarBotones()
@@ -63,8 +72,13 @@ document.addEventListener("DOMContentLoaded", () =>{
     const renderizarBotones = () => {
         let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+        let precioTotal = document.getElementById("precio-total") 
+                                 
+        precioTotal.textContent = `$ ${Number(precioTotal.textContent).toFixed(2)}`
+
         let divAcciones = document.getElementById("acciones-carrito")
         divAcciones.innerHTML = ""
+
 
         if(carrito.length){
             let btnVaciar = document.createElement("button")
@@ -104,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         carrito.splice(index, 1)
 
         localStorage.setItem("carrito",JSON.stringify(carrito))
-        alert("Eliminado del carrito")
+        alert("Eliminado del carrito")       
         renderizarProductos()
     }
 
