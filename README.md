@@ -1,4 +1,4 @@
-# 📱 E-Shop - Proyecto Final | TalentoTech
+# 📱 E-Commerce - Proyecto Final | TalentoTech
 
 Este proyecto es la **preentrega final** del curso [**Frontend JS**](https://talentotech.bue.edu.ar/#/) dictado por **TalentoTech**.  
 Consiste en una tienda e-commerce especializada en **smartphones**, desarrollada con tecnologías del frontend moderno: HTML, CSS y JavaScript.
@@ -39,19 +39,15 @@ Consiste en una tienda e-commerce especializada en **smartphones**, desarrollada
 ## 📁 Estructura del Proyecto
 ```
 TalenTech-FrontendJs/
-├── img/
+├── imgages/
 ├── css/
-│ ├── common.css
 │ └── style.css
 ├── js/
-│ ├── common.js
-│ ├── kart.js
-│ └── products.js
+│ ├── carrito.js
+│ └── app.js
 ├── pages/
+│ ├── index.html
 │ ├── carrito.html
-│ ├── catalogo.html
-│ └── contact.html
-├── index.html
 └── README.md
 ```
 ---
@@ -60,7 +56,7 @@ TalenTech-FrontendJs/
 ## 🌐 Hosting
 
 El sitio se encuentra desplegado en **GitHub Pages**:  
-🔗 [https://arielras.github.io/TalenTech-FrontendJs/](https://chiqogamer.github.io/Ecommerce-Botines/)
+🔗 [chiqogamer.github.io/Ecommerce-Botines](https://chiqogamer.github.io/Ecommerce-Botines/)
 
 ---
 
