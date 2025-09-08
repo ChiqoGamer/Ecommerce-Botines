@@ -240,7 +240,8 @@ nav ul li a:hover {
     position: relative;
 }
 
-/* Estilo para la sección de productos */
+
+/* -------------------------------------- SECTION PRODCUTOS ------------------------------------------------ */
 #productos {
     padding: 2%;
     margin: 5%;
@@ -258,14 +259,14 @@ nav ul li a:hover {
 #contenedor-productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 2rem;
 }
 
 .tarjeta-producto {
     margin: 0px;
     padding: 10% 10% 8%;
-    border-radius: 30px;
+    border-radius: 10px;
     transition: transform 0.3s ease; 
     cursor: pointer;
     background-color: #0b0f19;
@@ -274,8 +275,8 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: start;
     justify-content: flex-start;
-    height: 90%; /* Asegura altura uniforme si usas grid */
-    min-height: 400px; /* Puedes ajustar este valor según tu diseño */
+    /* height: 90%; Asegura altura uniforme si usas grid */
+     min-height: 350px; /*Puedes ajustar este valor según tu diseño */
 }
 
 .producto strong {
@@ -283,7 +284,9 @@ nav ul li a:hover {
     font-weight: lighter;
 }
 
-.precio {
+.tarjeta-producto p {
+    
+    margin: auto 0 1rem;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -303,7 +306,7 @@ nav ul li a:hover {
 
 #contenedor-productos button {
     align-self: center;
-    margin-top: auto; /* Empuja el botón al fondo */
+    /* margin-top: auto; Empuja el botón al fondo */
     padding: 0.5rem 1.2rem;
     background-color: #6366f1;
     border: none;
@@ -380,7 +383,7 @@ p {
     border-radius: 20px;
     padding: 3rem;
     color: white;
-    width: 50%; 
+    width: 70%; 
     height: 80vh;   /* Cambia a 80% de la altura de la ventana */ 
     min-height: 400px; 
     max-height: 900px;
@@ -414,64 +417,18 @@ form {
     align-items: center;
     text-align: start; 
     /* gap: 1rem; */
-    justify-content: space-between; 
+    justify-content: flex-start; 
     box-sizing: border-box;
 }
 
-/* form label {
-    width: 100%;
-    max-width: 50%;
-    min-width: 180px;
-    text-align: left;
-    position: relative;
-    left: -10px;
-}
 
-
-form input,
-form textarea {
-
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-    width: 90%;
-    max-width: 50%;
-    min-width: 180px;
-    margin-bottom: 20px;
-}
-
-form textarea {
-    height: 60px;
-}
-
-
-form button {
-    margin-top: 40px;
-    padding: 20px 10px;
-    background-color: #6366f1;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-
-    width: 20%;
-    max-width: 20%;
-}
-
-form button:hover {
-    background-color: #4044ee;
-    transform: scale(1.05);
-
-} */
  .form-contacto label,
 .form-contacto input,
 .form-contacto textarea,
 .form-contacto button {
-    width: 80%;
-    max-width: 500px;
-    min-width: 180px;
+    width: 90%;
+    max-width: 1000px;
+    /* min-width: 180px; */
     box-sizing: border-box;
 }
 
@@ -480,11 +437,16 @@ form button:hover {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    margin: 1rem 0 3rem;
+
+}
+
+.form-contacto textarea{
+    height: 100px;
 }
 
 .form-contacto button {
-    margin-top: 20px;
+    margin-top: auto;
     padding: 15px 10px;
     border-radius: 30px;
     background-color: #6366f1;
@@ -777,9 +739,9 @@ footer {
 }
 
 
-
+/* -------------------------------------- MEDIAS QUERYS PARA ADAPTABILIDAD ------------------------------------------------ */
 /* === MEDIA QUERY: Pantallas mayores a 1024px === */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     header {
         flex-wrap: wrap;
     }
@@ -811,12 +773,24 @@ footer {
 @media (max-width: 1350px) {
      .reseñas-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 2rem;
+        
     }
+
+    #reseñas{
+        padding: 3% 10%;
+    }
+
+    .card{
+        width: 95%;
+        /* height: 100%; */
+    }
+
+
 }
 
 /* Media Queries para adaptabilidad en tablets */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 
     .menu-icon {
         display: flex;
@@ -945,12 +919,6 @@ footer {
         padding: 5px;
     }
 }
-
-/* @media ((min-width: 600px) and (max-width: 1024px)) {
-    .producto {
-        font-size: 0.5rem;
-    }
-} */
 
 @media (min-width: 2000px) { 
     #seccion-principal{
