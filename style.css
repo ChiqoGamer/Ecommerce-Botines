@@ -384,9 +384,8 @@ p {
     padding: 3rem;
     color: white;
     width: 70%; 
-    height: 80vh;   /* Cambia a 80% de la altura de la ventana */ 
-    min-height: 400px; 
-    max-height: 900px;
+    height: 80%;   /* Cambia a 80% de la altura de la ventana */  
+    max-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -408,10 +407,10 @@ form {
     background-color: #33354d28;
     background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 101, 241, 0.062) 100%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.103) 82.52%);
     border-radius: 10px;
-    padding: 2rem 0;
+    padding: 2rem 0;   
 
     width: 100%;
-    height: 90%;  
+    height: 100%;   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,14 +435,15 @@ form {
 .form-contacto textarea {
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ccc;
-    margin: 1rem 0 3rem;
+    border: 1px solid #ccc; 
+    margin: .5rem 0 1.5rem;
 
 }
 
-.form-contacto textarea{
-    height: 100px;
-}
+/* .form-contacto textarea{
+    height: 100%; 
+    margin: 0;
+} */
 
 .form-contacto button {
     margin-top: auto;
@@ -490,7 +490,7 @@ footer {
     transform: scale(1.2);
 }
 
-.boton-subir {
+/* .boton-subir {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -509,7 +509,7 @@ footer {
     opacity: 0.3;
     transition: opacity 0.3s;
 
-}
+} */
 
 .boton-subir:hover {
     background-color: #333333;

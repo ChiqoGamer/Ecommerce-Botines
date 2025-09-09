@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     const renderizarProductos = () => {
-        //url = "https://dummyjson.com/products";
+        // url = "https://dummyjson.com/products";
         //url = "https://dummyjson.com/products?limit=10";
-        url = "https://dummyjson.com/products/category/mobile-accessories?limit=12";
+        url = "https://dummyjson.com/products/category/mobile-accessories";
         fetch(url)
             .then((respuesta) => respuesta.json())
             .then((datos) => {
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             })
     }
+
 
     const agregarProducto = (producto) => {
         carrito.push(producto)
